@@ -1,0 +1,108 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For Someone Special ❤️</title>
+
+  <style>
+    body {
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+      padding: 50px;
+      background: 
+        linear-gradient(rgba(255, 182, 193, 0.6), rgba(255, 105, 180, 0.6)),
+        url('https://images.unsplash.com/photo-1518895949257-7621c3c786d7');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+    }
+
+    h2 {
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    }
+
+    .page {
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+
+    button {
+      padding: 12px 25px;
+      margin: 15px;
+      font-size: 16px;
+      border-radius: 25px;
+      border: none;
+      background-color: #ff3366;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #cc0052;
+      transform: scale(1.08);
+    }
+  </style>
+</head>
+
+<body>
+
+<div id="page1" class="page active">
+  <h2>You are the most graceful soul I have ever met.</h2>
+  <h2>Your smile carries a peace I cannot explain.</h2>
+  <h2>Your presence makes my world softer and brighter.</h2>
+  <button onclick="nextPage(2)">Next ❤️</button>
+</div>
+
+<div id="page2" class="page">
+  <h2>No matter what happens, you will always have a special place in my heart.</h2>
+  <button onclick="nextPage(3)">Next ❤️</button>
+</div>
+
+<div id="page3" class="page">
+  <h2>
+    I will always be there for you.<br><br>
+    I will wait with patience and respect.<br><br>
+    And even if life takes you somewhere else,<br>
+    I will always pray for your happiness.
+  </h2>
+  <button onclick="nextPage(4)">Next ❤️</button>
+</div>
+
+<div id="page4" class="page">
+  <h2>I am truly proud of you.</h2>
+  <h2>You are hardworking, passionate about politics,</h2>
+  <h2>and incredibly talented in everything you do.</h2>
+  <button onclick="nextPage(5)">Next ❤️</button>
+</div>
+
+<div id="page5" class="page">
+  <h2>Will you be my Valentine? 💌</h2>
+  <button onclick="answerYes()">Yes ❤️</button>
+  <button onclick="answerNo()">No 💔</button>
+</div>
+
+<script>
+function nextPage(pageNumber) {
+  document.querySelectorAll('.page').forEach(page => {
+    page.classList.remove('active');
+  });
+  document.getElementById('page' + pageNumber).classList.add('active');
+}
+
+function answerYes() {
+  document.body.innerHTML = "<h1>Lesgooo ❤️💋 You are the best!</h1>";
+}
+
+function answerNo() {
+  document.body.innerHTML = "<h1>It's okay 🥲 Think again… I’ll still respect your decision.</h1>";
+}
+</script>
+
+</body>
+</html>
